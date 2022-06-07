@@ -11,7 +11,7 @@
     <nav class="navegacion" >
         <ul class="lista">
             <il><button  class="boton-nav"><a href="./nomadaaccesoex/acceso/index.html" >¿Quiénes somos?</a></button></il>
-            <il><button  class="boton-nav"><a href="./nomadaaccesoex/acceso/index.html" >Acceso</a></button></il>
+            <il><button  class="boton-nav"><a href="./nomadaaccesoex/index.html" >Acceso</a></button></il>
         </ul>    
     
     <nav>
