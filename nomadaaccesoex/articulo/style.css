@@ -1,0 +1,8 @@
+body
+{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(214,252,179,1) 0%, rgba(121,250,245,1) 90% );
+}
+
+table{
+    background-image: radial-gradient( circle 321px at 8.3% 75.7%,  rgba(209,247,241,1) 0%, rgba(249,213,213,1) 81% );  
+}
