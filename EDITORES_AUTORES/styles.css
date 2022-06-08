@@ -103,6 +103,7 @@ body{
 
 .card .description p{
     margin-top: 10px;
+    text-align: justify;
 }
 
 .card .description input{
