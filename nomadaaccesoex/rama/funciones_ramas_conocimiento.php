@@ -23,6 +23,21 @@
     
     }
 
+    function d_ramas_conocimiento() {
+        $con=conectarbd();
+    
+        var_dump($_POST);
+    
+        //  $id=$_POST;
+    
+        $sql="DELETE FROM CAT_RAMA_CONOCIMIENTO  WHERE NID_RAMA_CONOCIMIENTO='$id'";
+        $query= mysqli_query($con,$sql);
+        if(!$query)
+        {
+            echo "algo salió mal";
+        }
+    }
+
     function u_ramas_conocimiento() {
         $con = conectarbd();
         $nombre = $_POST['nombre'];

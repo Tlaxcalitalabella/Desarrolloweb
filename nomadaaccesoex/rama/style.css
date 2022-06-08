@@ -35,6 +35,14 @@ tr{
     height: 7vh;
 }
 
+.repositorio{
+    padding:30px;
+    margin: 15px;
+    background-color: beige;
+    width: 100%;
+    height: 20vh;
+}
+
 .btn-opcion:hover {
     background-color: cadetblue;
 }

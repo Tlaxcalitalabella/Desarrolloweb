@@ -1,9 +1,12 @@
 <?php
 
-include("conexion.php");
-$con=conectar();
+require './funciones.php';
 
-$NID_ARTICULO=$_GET['NID_RAMA_CONOCIMIENTO'];
+$con=conectarbd();
+
+var_dump($_POST);
+
+$NID_ARTICULO=$_POST;
 
 $sql="DELETE FROM CAT_RAMA_CONOCIMIENTO  WHERE NID_RAMA_CONOCIMIENTO='$NID_RAMA_CONOCIMIENTO'";
 $query=mysqli_query($con,$sql);

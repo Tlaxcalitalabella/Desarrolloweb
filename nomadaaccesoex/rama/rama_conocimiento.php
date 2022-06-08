@@ -40,7 +40,6 @@
     
                         </tr>
                     </thead>
-                    <script src="./rama_conocimiento.js"></script>
                     <tbody>
                         <?php
                             $lista_ramas = array();
@@ -50,15 +49,48 @@
                                     {
                                     ?>
                                             <tr>
-                                                <th><button class="btn-opcion" onclick=""><?php  echo $ramas->CNOMBRE_RAMA_CONOCIMIENTO;?></button></th>                                  
+                                                <th><button id="btnopcion" class="btn-opcion" onclick="obtenId(<?php echo $ramas->NID_RAMA_CONOCIMIENTO;?>)"><?php  echo $ramas->CNOMBRE_RAMA_CONOCIMIENTO;?></button></th>                             
                                             </tr>
+                                            <p></p>
                                     <?php 
-                                        } ?>
+                                    } ?>
+                            
                       </tbody>
-                                
-                                
+                      che
                 </table>
-            
+
+                <div class="repositorio" enctype='multipart/form-data'>
+                           <form method="post">
+                               <button name="eliminar" id="eliminar" value="" class="btn btn-danger">eliminar</button>
+                           </form>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+                crossorigin="anonymous"></script> 
+                <script type="text/javascript">
+
+                    function obtenId(id)
+                    {
+                        console.log(id);
+                        $('#eliminar').click( function eliminar(){
+                            $.ajax(
+                                {
+                                    'url': 'http://localhost:8000/CAT_RAMAS_CONOCIMIENTO',
+                                    'method': 'DELETE',
+                                    'data': {id},
+                                    'headers':
+                                            {
+                                                'accept': 'application/json',
+                                                'Access-Control-Allow-Origin':'*'
+                                            },
+                                    'success': function() {
+                                        alert('borrado con éxito');
+                                    }
+                    
+                                });
+                            });
+                    }
+                 </script>
+                </div>
             </div>
         </div>
     </div>
