@@ -4,5 +4,37 @@ body
 }
 
 table{
-    background-image: radial-gradient( circle 321px at 8.3% 75.7%,  rgba(209,247,241,1) 0%, rgba(249,213,213,1) 81% );  
+    
+    background-image: radial-gradient( circle 321px at 8.3% 75.7%,  rgba(209,247,241,1) 0%, rgba(249,213,213,1) 81% ); 
+    width: 100%;
+    height: 10vh;
+    padding: 0px;
+    margin: 0%;
+}
+
+.table {
+    padding: 0px;
+    margin: 0px;
+}
+
+th {
+    margin: 0;
+    padding: 0px;
+}
+
+tr{
+    margin: 0px;
+    padding:0px;
+}
+.btn-opcion {
+    box-sizing: border-box;
+    background-color: transparent;
+    border-color: transparent;
+    width: 100%;
+    padding: 15px;
+    height: 7vh;
+}
+
+.btn-opcion:hover {
+    background-color: cadetblue;
 }

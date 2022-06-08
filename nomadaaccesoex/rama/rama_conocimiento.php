@@ -36,30 +36,29 @@
                 <table class="table" >
                     <thead class="table-success table-striped" >
                         <tr>
-                            <th>ID_Rama</th>
                             <th>Nombre_Rama</th>
-                           
-                            <th></th>
-                            <th></th>
+    
                         </tr>
                     </thead>
-
+                    <script src="./rama_conocimiento.js"></script>
                     <tbody>
                         <?php
-                                            while($row=mysqli_fetch_array($query)){
-                                        ?>
+                            $lista_ramas = array();
+                            $lista_ramas = g_ramas_conocimiento();
+                    //           $lista_ramas->CNOMBRE_RAMA_CONOCIMIENTO
+                            foreach($lista_ramas as $ramas)
+                                    {
+                                    ?>
                                             <tr>
-                                                <th><?php  echo $row['NID_RAMA_CONOCIMIENTO']?></th>
-                                                <th><?php  echo $row['CNOMBRE_RAMA']?></th>
-                                                <th><a href="actualizar.php?id=<?php echo $row['NID_RAMA_CONOCIMIENTO'] ?>" class="btn btn-info">Editar</a></th>
-                                                <th><a href="delete.php?id="<?php echo $row['NID_RAMA_CONOCIMIENTO'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                                <th><button class="btn-opcion" onclick=""><?php  echo $ramas->CNOMBRE_RAMA_CONOCIMIENTO;?></button></th>                                  
                                             </tr>
-                                        <?php 
-                                            }
-                                        ?>
-                                </tbody>
-                            </table>
-
+                                    <?php 
+                                        } ?>
+                      </tbody>
+                                
+                                
+                </table>
+            
             </div>
         </div>
     </div>

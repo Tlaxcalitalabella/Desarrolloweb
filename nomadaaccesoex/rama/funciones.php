@@ -41,16 +41,15 @@ function verificarImagen()
     }
     else 
     {
-        $cuts = 'img/'.$name; 
-        echo $cuts;           
-        echo $tmp_name;    
+        $cuts = $name; 
+    
         if(move_uploaded_file($tmp_name,$cuts))
         {
             $resultado = "La imagen fue cargada exitosamente";
         }
         else               
         {                
-            $resultado = "Ha ocurrido un error aqui";
+            $resultado = "Not uploaded because of error #".$_FILES["file"]["error"];
         }
     }
 

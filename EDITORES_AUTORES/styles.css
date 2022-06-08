@@ -66,19 +66,19 @@ body{
 }
 
 .card:nth-of-type(1) .img__back{
-    background-image: url(../imagenes/bg4.jpeg);
+    background-image: url(./imagenes/bg4.jpeg);
 }
 
 .card:nth-of-type(2) .img__back{
-    background-image: url(../imagenes/bg4.jpeg);
+    background-image: url(./imagenes/bg4.jpeg);
 }
 
 .card:nth-of-type(3) .img__back{
-    background-image: url(../imagenes/bg4.jpeg);
+    background-image: url(./imagenes/bg4.jpeg);
 }
 
 .card:nth-of-type(4) .img__back{
-    background-image: url(../imagenes/bg4.jpeg);
+    background-image: url(./imagenes/bg4.jpeg);
 }
 
 .card:hover .img__back{
