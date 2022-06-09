@@ -1,17 +1,46 @@
+
 <?php
+function eliminar($resourceId)
+{
+    echo $resourceId;
+    if(!empty($resourceId))
+        {
+        $query = $con->query("SELECT * FROM `CAT_RAMA_CONOCIMIENTO` WHERE `NID_RAMA_CONOCIMIENTO`= $resourceId;");
+        if ($query->num_rows <1){
+            http_response_code( 400 );
+            echo json_encode(
+                [
+                    'error' => "$resourceId no existe",
+                ]
+                );
 
-require './funciones.php';
+                die;
 
-$con=conectarbd();
+        } else {    
 
-var_dump($_POST);
+            $sql="DELETE FROM CAT_RAMA_CONOCIMIENTO  WHERE NID_RAMA_CONOCIMIENTO=$resourceId";
+            $query= mysqli_query($con,$sql);
+            if(!$query)
+            {
+                echo "algo salió mal";
+            }
+            else {
 
-$NID_ARTICULO=$_POST;
+                $rows['datos'] = array();
 
-$sql="DELETE FROM CAT_RAMA_CONOCIMIENTO  WHERE NID_RAMA_CONOCIMIENTO='$NID_RAMA_CONOCIMIENTO'";
-$query=mysqli_query($con,$sql);
+                while($r = $query->fetch_object()) {
+                    array_push($rows['datos'],$r);
+                }
 
-    if($query){
-        Header("Location: rama.php");
-    }
-?>
+                echo json_encode(
+                    $rows,
+                );
+            }
+
+        }
+        $query->close();
+        }
+        else {
+        echo "no exite id";
+        } 
+}
