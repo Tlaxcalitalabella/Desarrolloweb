@@ -21,6 +21,7 @@ function eliminar1()
     'method':'DELETE',
     'body': {
       'action':'eliminar',
+      '$reourceId':{globalId},
     }
 
   })

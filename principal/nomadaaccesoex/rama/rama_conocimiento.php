@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
+    
     <div class="container mt-1">
         <div class="row">
             <div class="col-md-3">
@@ -64,17 +65,6 @@
                 <script>
     
                 </script>
-
-
-                <div class="repositorio" enctype='multipart/form-data'>
-                           <form method="post">
-                               <button name="eliminar" id="eliminarid" value="" class="btn btn-danger" onclick="eliminar1()">eliminar</button>
-                           </form>
-                <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
-                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
-                crossorigin="anonymous"></script> 
-            
-                </div>
             </div>
         </div>
     </div>

@@ -1,8 +1,9 @@
 
 <?php
+
 function eliminar($resourceId)
 {
-    echo $resourceId;
+    echo "holiwidinsky";
     if(!empty($resourceId))
         {
         $query = $con->query("SELECT * FROM `CAT_RAMA_CONOCIMIENTO` WHERE `NID_RAMA_CONOCIMIENTO`= $resourceId;");

@@ -8,7 +8,6 @@
         $query = $con->prepare("INSERT INTO `CAT_RAMA_CONOCIMIENTO` (`NID_RAMA_CONOCIMIENTO`,`CNOMBRE_RAMA_CONOCIMIENTO`,`IMAGEN`,`RUTA_IMAGEN`) VALUES (?,?,?,?) ");
         $query->bind_param('isss',$identity,$nombre,$imagen,$cuts);
         $query->execute();
-        echo "uwu";
         $query ->close();
         $con->close();
     }
